@@ -1,13 +1,13 @@
 "use client";
 
 import {
-  useGetPackagesQuery,
-  useBookPackageMutation,
+  useGet_packagesQuery,
+  useBook_packageMutation,
 } from "@/app/lib/package_api";
 
 export default function PackageList() {
-  const { data, isLoading, isError } = useGetPackagesQuery();
-  const [book_package, { isLoading: booking }] = useBookPackageMutation();
+  const { data, isLoading, isError } = useGet_packagesQuery();
+  const [book_package, { isLoading: booking }] = useBook_packageMutation();
 
   const handle_book = async (id: string) => {
     try {

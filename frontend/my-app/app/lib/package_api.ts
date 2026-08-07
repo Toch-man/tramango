@@ -69,4 +69,4 @@ export const packages_api = createApi({
   }),
 });
 
-export const { useGetPackagesQuery, useBookPackageMutation } = packages_api;
+export const { useGet_packagesQuery, useBook_packageMutation } = packages_api;
