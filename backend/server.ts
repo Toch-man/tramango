@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
 
-import packageRoutes from "./routes/package_routes";
+import packageRoutes from "./src/routes/package_route";
 
 dotenv.config();
 
@@ -12,7 +12,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use("/api", packageRoutes);
+app.use("/api/package", packageRoutes);
 
 const PORT = process.env.PORT || 5000;
 const MONGODB_URI = process.env.MONGODB_URI;
