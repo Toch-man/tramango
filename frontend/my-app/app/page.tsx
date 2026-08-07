@@ -3,7 +3,7 @@ import PackageList from "@/app/components/package_list";
 // This stays a Server Component — it has no interactivity or hooks of
 // its own, so there's no reason to ship it as client JS. It just
 // renders the actual interactive list, which needs to be a Client
-// Component since it uses RTK Query hooks (useGetPackagesQuery, etc.)
+// Component since it uses RTK Query hooks (usseGetPackagesQuery, etc.)
 // and React state — both require the browser.
 export default function HomePage() {
   return (

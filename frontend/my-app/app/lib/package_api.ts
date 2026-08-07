@@ -35,12 +35,7 @@ export const packages_api = createApi({
           url: `/api/packages/${id}/book`,
           method: "POST",
         }),
-        // ── OPTIMISTIC UPDATE ──────────────────────────────────
-        // instead of waiting for the server response and re-fetching the
-        // whole list, we directly patch the cached package's availableSlots
-        // down by 1 the moment the request fires — this is what makes the
-        // UI update instantly, with no page refresh and no visible delay.
-        // If the request fails, the patch is automatically rolled back.
+
         async onQueryStarted(id, { dispatch, queryFulfilled }) {
           const patch_result = dispatch(
             packages_api.util.updateQueryData(
